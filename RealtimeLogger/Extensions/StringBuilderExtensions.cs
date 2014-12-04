@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Web;
 
+
 namespace RealtimeLogger.Extensions
 {
-    public class StringBuilderExtensions
+    public static class StringBuilderExtensions
     {
         public static StringBuilder AppendMessage(this StringBuilder sb, string text, Func<string, bool> predicate = null)
         {
@@ -25,5 +26,6 @@ namespace RealtimeLogger.Extensions
             }
 
             return sb;
+        }
     }
 }

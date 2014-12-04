@@ -5,10 +5,11 @@ using System.Net.Http;
 using System.Text;
 using System.Web;
 using System.Web.Http.Tracing;
+using RealtimeLogger.Extensions;
 
 namespace RealtimeLogger.Infrastructure
 {
-    public class SignalRTrace : SignalRBase<TraceHub>, ITraceWriter
+    public class SignalRTrace : SignalRBase<Tracehub>, ITraceWriter
     {
         public void Trace(HttpRequestMessage request, string category, TraceLevel level, Action<TraceRecord> traceAction)
         {
